@@ -13,8 +13,8 @@ const WindowResizeListener = () => {
     };
   }, []);
   return (
-    <div className="px-10 text-center">
-          <h1 className="text-2xl font-bold text-center py-5">UseEffect Clean Up Function -- Task 3 -- Window Resize Listener </h1>
+    <div className="sm:px-10 px-5 text-center">
+              <h1 className="sm:text-2xl text-lg font-bold text-center py-5">UseEffect Clean Up Function -- Task 3 -- Window Resize Listener </h1>
       <p className="bg-red-500 text-white py-2 px-4 rounded-md w-full">Window Size: {width}px</p>
     </div>
   );

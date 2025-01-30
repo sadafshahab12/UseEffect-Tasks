@@ -8,8 +8,10 @@ const DebouncedSearchInput = () => {
     return () => clearTimeout(handler);
   }, [query]);
   return (
-    <div className="p-5 bg-pink-400 text-slate-700 space-y-3">
-      <h1 className="text-2xl font-bold text-center py-5">UseEffect Clean Up Function -- Task 7 -- Debounce Search Input </h1>
+    <div className="sm:p-5 p-3 bg-pink-400 text-slate-700 space-y-3">
+      <h1 className="sm:text-2xl text-lg font-bold text-center py-5">
+        UseEffect Clean Up Function -- Task 8 -- Debounce Search Input{" "}
+      </h1>
       <input
         type="text"
         placeholder="Search..."

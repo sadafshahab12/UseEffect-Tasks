@@ -27,24 +27,26 @@ const Timer = () => {
   };
   return (
     <div className="p-5 border text-center space-y-4">
-      <h1 className="text-2xl font-bold text-center py-5">UseEffect Clean Up Function -- Task 4 -- Timer </h1>
+      <h1 className="sm:text-2xl text-lg font-bold text-center py-5">
+        UseEffect Clean Up Function -- Task 4 -- Timer{" "}
+      </h1>
       <h1 className="text-xl font-bold">Time : {time}</h1>
-      <div className="space-x-4">
+      <div className="gap-4 flex sm:flex-row flex-col justify-center items-center">
         <button
           onClick={handleStart}
-          className="bg-gray-600 text-white py-2 px-4 rounded-md text-sm active:scale-95 transition-all ease-in duration-100"
+          className="bg-gray-600 text-white py-2 px-4 rounded-md text-sm active:scale-95 transition-all ease-in duration-100 sm:w-auto w-full"
         >
           Start
         </button>
         <button
           onClick={handleStop}
-          className="bg-gray-600 text-white py-2 px-4 rounded-md text-sm active:scale-95 transition-all ease-in duration-100"
+          className="bg-gray-600 text-white py-2 px-4 rounded-md text-sm active:scale-95 transition-all ease-in duration-100 sm:w-auto w-full"
         >
           Stop
         </button>
         <button
           onClick={handleReset}
-          className="bg-gray-600 text-white py-2 px-4 rounded-md text-sm active:scale-95 transition-all ease-in duration-100"
+          className="bg-gray-600 text-white py-2 px-4 rounded-md text-sm active:scale-95 transition-all ease-in duration-100 sm:w-auto w-full"
         >
           Reset
         </button>

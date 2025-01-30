@@ -9,16 +9,18 @@ import ThemeSwitcher from "./components/ThemeSwitcher";
 import OnlineStatusChecker from "./components/OnlineStatusChecker";
 import APIFetch from "./components/APIFetch";
 import DebouncedSearchInput from "./components/DebouncedSearchInput";
+import FormInputSynchroniation from "./components/FormInputSynchroniation";
 
 function App() {
 
 
   return (
-    <div className="space-y-5 p-10">
+    <div className="space-y-5 sm:p-10 p-5">
      <Counter/>
      <APIFetch/>
      <WindowResizeListener/>
      <Timer/>
+     <FormInputSynchroniation/>
      <ThemeSwitcher/>
      <OnlineStatusChecker/>
      <DebouncedSearchInput/>

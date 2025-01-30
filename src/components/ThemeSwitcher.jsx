@@ -16,9 +16,16 @@ const ThemeSwitcher = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
   return (
-    <div className="text-center py-8 shadow-lg inline-block w-full border ">
-      <h1 className="text-2xl font-bold text-center py-5">UseEffect Clean Up Function -- Task 5 -- Theme Switcher </h1>
-      <button className="bg-slate-800 text-white rounded-md cursor-pointer py-2 px-4"  onClick={toggleTheme}>{theme === "light" ? "Dark Theme" : "Light Theme"}</button>
+    <div className="text-center py-8 shadow-lg inline-block w-full border p-5 ">
+      <h1 className="sm:text-2xl text-lg font-bold text-center py-5">
+        UseEffect Clean Up Function -- Task 6 -- Theme Switcher{" "}
+      </h1>
+      <button
+        className="bg-slate-800 text-white rounded-md cursor-pointer py-2 px-4"
+        onClick={toggleTheme}
+      >
+        {theme === "light" ? "Dark Theme" : "Light Theme"}
+      </button>
     </div>
   );
 };

@@ -31,10 +31,10 @@ const APIFetch = () => {
   }
   return (
     <>
-      <h1 className="text-2xl font-bold text-center py-5">
+      <h1 className="sm:text-2xl text-lg font-bold text-center py-5">
         UseEffect Clean Up Function -- Task 2 -- API Fetching{" "}
       </h1>
-      <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 max-w-6xl mx-auto py-5 px-10">
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 sm:max-w-6xl w-full mx-auto sm:px-10 px-4">
         {users.map((user, id) => (
           <div
             key={id}
@@ -42,10 +42,10 @@ const APIFetch = () => {
           >
             <div className="space-y-2">
               <h1 className="text-lg font-bold">{user.name}</h1>
-              <p className="text-gray-400 text-sm">{user.username}</p>
+              <p className="text-gray-400 sm:text-sm text-[12px]">{user.username}</p>
             </div>
-            <div className="text-sm space-y-2">
-              <p className="bg-slate-800 text-white px-5 py-1 rounded-2xl inline-block text-sm">
+            <div className="sm:text-sm text-[12px] sm:space-y-2 space-y-1">
+              <p className="bg-slate-800 text-white sm:px-5 px-2 py-1 rounded-2xl inline-block sm:text-sm text-[12px]">
                 {user.email}
               </p>
               <p>Website : {user.website}</p>
