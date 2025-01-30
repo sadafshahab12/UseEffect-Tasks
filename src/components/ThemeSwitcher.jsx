@@ -4,13 +4,20 @@ const ThemeSwitcher = () => {
   const [theme, setTheme] = useState("light");
   useEffect(() => {
     document.body.className = theme;
+    document.body.style.backgroundColor = theme === "light" ? "#fff" : "#333";
+    document.body.style.color = theme === "light" ? "#333" : "#fff";
+    return () => {
+      document.body.className = "";
+      document.body.style.backgroundColor = "";
+      document.body.style.color = "";
+    };
   }, [theme]);
-
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
   return (
-    <div>
-      <button onClick={()=> setTheme("light")}>Light</button>
-      <button onClick={()=> setTheme("dark")}>Dark Theme</button>
-      <p>Current Theme : {theme}</p>
+    <div className="text-center py-8 shadow-lg inline-block w-full ">
+      <button className="bg-slate-800 text-white rounded-md cursor-pointer py-2 px-4"  onClick={toggleTheme}>{theme === "light" ? "Dark Theme" : "Light Theme"}</button>
     </div>
   );
 };

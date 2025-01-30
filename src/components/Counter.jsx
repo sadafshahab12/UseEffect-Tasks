@@ -11,7 +11,7 @@ const Counter = () => {
     setCount((prevCount) => prevCount + 1);
   };
   return (
-    <div className="text-center my-4" >
+    <div className="text-center py-8 shadow-lg inline-block w-full  " >
       <button onClick={handleCount} className="bg-slate-800 text-white rounded-md cursor-pointer py-2 px-4">click me</button>
     </div>
   );

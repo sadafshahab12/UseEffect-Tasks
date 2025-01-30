@@ -8,6 +8,7 @@ import Timer from "./components/Timer";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import OnlineStatusChecker from "./components/OnlineStatusChecker";
 import APIFetch from "./components/APIFetch";
+import DebouncedSearchInput from "./components/DebouncedSearchInput";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
      <Timer/>
      <ThemeSwitcher/>
      <OnlineStatusChecker/>
+     <DebouncedSearchInput/>
     </>
   );
 }

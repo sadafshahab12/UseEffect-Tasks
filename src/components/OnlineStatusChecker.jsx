@@ -7,7 +7,8 @@ const OnlineStatusChecker = () => {
     const handleOffline = () => setIsOnline(false);
     window.addEventListener("online", handleOnline);
     window.addEventListener("online", handleOffline);
-    return () => {  //return cleanup function
+    return () => {
+      //return cleanup function
       window.removeEventListener("online", handleOnline);
       window.removeEventListener("online", handleOffline);
     };
@@ -15,7 +16,7 @@ const OnlineStatusChecker = () => {
 
   return (
     <div>
-      <p>{isOnline? "Online" : "Offline"}</p>
+      <p>{isOnline ? "Online" : "Offline"}</p>
     </div>
   );
 };
