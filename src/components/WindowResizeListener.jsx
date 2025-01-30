@@ -6,15 +6,15 @@ const WindowResizeListener = () => {
     const handleResize = () => {
       setWidth(window.innerWidth);
     };
-    window.addEventListener("resize", handleResize)
+    window.addEventListener("resize", handleResize);
     // clean up function
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
   return (
-    <div>
-      <p>Window Size: {width}</p>
+    <div className="px-10 text-center">
+      <p className="bg-red-500 text-white py-2 px-4 rounded-md w-full">Window Size: {width}px</p>
     </div>
   );
 };

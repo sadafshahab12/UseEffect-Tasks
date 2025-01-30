@@ -3,19 +3,14 @@ import React, { useEffect, useState } from "react";
 const ThemeSwitcher = () => {
   const [theme, setTheme] = useState("light");
   useEffect(() => {
-
-    document.body.classList.remove("light", "dark");
-    document.body.classList.add(theme)
+    document.body.className = theme;
   }, [theme]);
-  const handleTheme = (newTheme) => {
-   
-      setTheme(newTheme)
 
-  };
   return (
     <div>
-      <button onClick={handleTheme}>Light</button>
-      <button onClick={handleTheme}>Dark Theme</button>
+      <button onClick={()=> setTheme("light")}>Light</button>
+      <button onClick={()=> setTheme("dark")}>Dark Theme</button>
+      <p>Current Theme : {theme}</p>
     </div>
   );
 };

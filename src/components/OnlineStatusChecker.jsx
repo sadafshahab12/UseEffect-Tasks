@@ -1,29 +1,23 @@
 import React, { useEffect, useState } from "react";
 
 const OnlineStatusChecker = () => {
-  const [checkStatus, setCheckStatus] = useState(true);
-  const [message, setMessage] = useState("");
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
   useEffect(() => {
-if(checkStatus){
-    setCheckStatus(false)
-}
-else{
-    setCheckStatus(true)
-}
+    const handleOnline = () => setIsOnline(true);
+    const handleOffline = () => setIsOnline(false);
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("online", handleOffline);
+    return () => {  //return cleanup function
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("online", handleOffline);
+    };
   }, []);
 
-  const handleChangeStatus = ()=>{
-    if (checkStatus) {
-        setMessage("Online Status");
-      } else {
-        setMessage("Offline Status");
-      }
-  }
-  return <div>
-    <button onClick={handleChangeStatus}>Change Statu</button>
-    {message && <p>{message}</p> }
-    
-  </div>;
+  return (
+    <div>
+      <p>{isOnline? "Online" : "Offline"}</p>
+    </div>
+  );
 };
 
 export default OnlineStatusChecker;

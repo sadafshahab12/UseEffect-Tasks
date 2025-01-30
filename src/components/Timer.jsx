@@ -26,11 +26,14 @@ const Timer = () => {
     setTime(60);
   };
   return (
-    <div>
-      Time : {time}
-      <button onClick={handleStart}>Start</button>
-      <button onClick={handleStop}>Stop</button>
-      <button onClick={handleReset}>Reset</button>
+    <div className="p-5 border m-5 text-center space-y-4">
+      <h1 className="text-xl font-bold">Time : {time}</h1>
+      <div className="space-x-4">
+
+      <button onClick={handleStart} className="bg-gray-600 text-white py-2 px-4 rounded-md text-sm active:scale-95 transition-all ease-in duration-100">Start</button>
+      <button onClick={handleStop} className="bg-gray-600 text-white py-2 px-4 rounded-md text-sm active:scale-95 transition-all ease-in duration-100">Stop</button>
+      <button onClick={handleReset} className="bg-gray-600 text-white py-2 px-4 rounded-md text-sm active:scale-95 transition-all ease-in duration-100">Reset</button>
+      </div>
     </div>
   );
 };
