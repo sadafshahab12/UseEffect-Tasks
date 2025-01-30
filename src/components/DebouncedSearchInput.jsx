@@ -8,13 +8,14 @@ const DebouncedSearchInput = () => {
     return () => clearTimeout(handler);
   }, [query]);
   return (
-    <div className="p-5 bg-blue-600 text-white">
+    <div className="p-5 bg-pink-400 text-slate-700 space-y-3">
+      <h1 className="text-2xl font-bold text-center py-5">UseEffect Clean Up Function -- Task 7 -- Debounce Search Input </h1>
       <input
         type="text"
         placeholder="Search..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="border border-slate-700 py-2 px-5 outline-none rounded-md"
+        className=" py-2 px-5 outline-none rounded-md w-full"
       />
       <p>Debounce query : {debouncedQuery}</p>
     </div>

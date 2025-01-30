@@ -14,7 +14,7 @@ function App() {
 
 
   return (
-    <>
+    <div className="space-y-5 p-10">
      <Counter/>
      <APIFetch/>
      <WindowResizeListener/>
@@ -22,7 +22,7 @@ function App() {
      <ThemeSwitcher/>
      <OnlineStatusChecker/>
      <DebouncedSearchInput/>
-    </>
+    </div>
   );
 }
 
